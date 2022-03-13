@@ -1,3 +1,5 @@
+const icones = ["paper-plane-outline", "compass-outline", "heart-outline", "person-outline"];
+
 export default function Navbar() {
     return (
         <div class="navbar">
@@ -21,10 +23,10 @@ export default function Navbar() {
                 </div>
 
                 <div class="icones">
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                    <ion-icon name="compass-outline"></ion-icon>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="person-outline"></ion-icon>
+                    {icones.map((icone) => (
+                        <ion-icon name={icone}></ion-icon>
+                    ))}
+                    
                 </div>
 
                 <div class="icones-mobile">

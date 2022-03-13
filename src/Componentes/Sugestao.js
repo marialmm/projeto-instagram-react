@@ -1,11 +1,14 @@
 export default function Sugestao(props) {
+    const {usuario, razao} = props;
+    const img = `./assets/img/${usuario}.svg`
+
     return (
         <div class="sugestao">
             <div class="usuario">
-                <img src={props.img} />
+                <img src={img} />
                 <div class="texto">
-                    <div class="nome">{props.nome}</div>
-                    <div class="razao">{props.razao}</div>
+                    <div class="nome">{usuario}</div>
+                    <div class="razao">{razao}</div>
                 </div>
             </div>
 

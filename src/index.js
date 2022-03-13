@@ -1,17 +1,6 @@
 import ReactDom from "react-dom"
-import Corpo from "./Corpo"
-import Navbar from "./Navbar"
-import RodapeMobile from "./RodapeMobile"
-
-function App(){
-    return(
-        <div>
-            <Navbar />
-            <Corpo />
-            <RodapeMobile />
-        </div>
-    )
-}
+import App from "./Componentes/App"
 
 const root = document.querySelector('.root');
-ReactDom.render(<App />, root);
+const app = <App />;
+ReactDom.render(app, root);
