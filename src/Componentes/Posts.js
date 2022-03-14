@@ -3,22 +3,31 @@ import Post from "./Post";
 const posts = [
     {
         usuario: "meowed",
-        img: "./assets/img/gato-telefone.svg",
+        src: "./assets/img/gato-telefone.svg",
         usuarioCurtidas: "respondeai",
-        curtidas: "101.523"
+        curtidas: "101.523",
+        tipo: "Imagem"
     },
     {
         usuario: "barked",
-        img: "./assets/img/dog.svg", 
+        src: "./assets/img/dog.svg",
         usuarioCurtidas: "adorable_animals",
-        curtidas: "99.159"
+        curtidas: "99.159",
+        tipo: "Imagem"
+    },
+    {
+        usuario: "meowed",
+        src: "./assets/video/video",
+        usuarioCurtidas: "barked",
+        curtidas: "1.242",
+        tipo: "video"
     }]
 
 export default function Posts() {
     return (
         <div class="posts">
-            {posts.map((post) =>(
-            <Post usuario={post.usuario} img={post.img} usuarioCurtidas={post.usuarioCurtidas}  curtidas={post.curtidas} />))}
+            {posts.map((post) => (
+                <Post usuario={post.usuario} src={post.src} usuarioCurtidas={post.usuarioCurtidas} curtidas={post.curtidas} tipo={post.tipo}/>))}
         </div>
     )
 }

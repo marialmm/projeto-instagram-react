@@ -1,5 +1,8 @@
+import Imagem from "./Imagem";
+import Video from "./Video";
+
 export default function Post(props) {
-    const {usuario, img, usuarioCurtidas, curtidas} = props;
+    const {usuario, src, usuarioCurtidas, curtidas, tipo} = props;
     const imgUsuario = `./assets/img/${usuario}.svg`;
     const imgCurtidas = `./assets/img/${usuarioCurtidas}.svg`;
     const icones = ["heart-outline", "chatbubble-outline", "paper-plane-outline"];
@@ -17,7 +20,7 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={img} />
+                {(tipo === "Imagem") ? <Imagem src = {src} /> : <Video src={src} />}
             </div>
 
             <div class="fundo">
